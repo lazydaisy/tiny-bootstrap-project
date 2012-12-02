@@ -1,0 +1,25 @@
+/* Custom CSS Settings
+-------------------------*/
+#page-site-index #page-header h1,
+h1, h2, h3,h1.main, h2.main, h3.main,
+h2.headingblock,
+h1.headermain,
+h3.name,
+.default-unit h1,
+.block .header .title h2 {
+    font-family: '[[setting:fontface]]';
+}
+.tiny-navbar .brand {
+    background-image: url([[setting:navbaricon]]);
+}
+
+@font-face {
+      font-family: FerroRosso;
+      src: url(tiny/font/FerroRosso.ttf) format("truetype");
+}
+@font-face {
+      font-family: Mordred;
+      src: url(tiny/font/Mordred.ttf) format("truetype");
+}
+
+[[setting:customcss]]
