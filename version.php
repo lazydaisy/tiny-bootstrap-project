@@ -17,14 +17,17 @@
 /**
  * Theme version info
  *
- * @package    theme
- * @subpackage tiny
- * @copyright  2012 Mary Evans
+ * @package    theme_tiny
+ * @copyright  2014 Mary Evans
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
 defined('MOODLE_INTERNAL') || die;
 
-$plugin->version   = 2012100201; // The current module version (Date: YYYYMMDDXX)
-$plugin->requires  = 2012061700; // Requires this Moodle version
+$plugin->version   = 2014011400; // The current module version (Date: YYYYMMDDXX)
+$plugin->requires  = 2013111801.00; // Requires this Moodle version
 $plugin->component = 'theme_tiny'; // Full name of the plugin (used for diagnostics)
+$plugin->dependencies = array(
+    'theme_base'  => 2013110500,
+);
+

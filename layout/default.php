@@ -15,30 +15,33 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Layout for Moodle's tiny theme.
+ * Default layout for Moodle's tiny theme.
  *
- * @package   theme
- * @copyright 2012 Mary Evans
+ * @package   theme_tiny
+ * @copyright 2014 Mary Evans
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
+$hasfootnote = (!empty($PAGE->theme->settings->footnote));
+$haswelcomenote = (!empty($PAGE->theme->settings->welcomenote));
+$haslogo = (!empty($PAGE->theme->settings->logo));
+$hasheader = (empty($PAGE->layout_options['noheader']));
+if (!isloggedin() || isguestuser()) {
+    $custommenu = $OUTPUT->custom_menu($PAGE->theme->settings->custommenuitems);
+} else {
+    $custommenu = $OUTPUT->custom_menu();
+}
+$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
+
 $hasheading = ($PAGE->heading);
 $hasnavbar = (empty($PAGE->layout_options['nonavbar']) && $PAGE->has_navbar());
-$hasheader = (empty($PAGE->layout_options['noheader']));
 $hasfooter = (empty($PAGE->layout_options['nofooter']));
 $hassidepre = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-pre', $OUTPUT));
 $hassidepost = (empty($PAGE->layout_options['noblocks']) && $PAGE->blocks->region_has_content('side-post', $OUTPUT));
 $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
-$hasfootnote = (!empty($PAGE->theme->settings->footnote));
-$haswelcomenote = (!empty($PAGE->theme->settings->welcomenote));
-$haslogo = (!empty($PAGE->theme->settings->logo));
 
 $showsidepre = ($hassidepre && !$PAGE->blocks->region_completely_docked('side-pre', $OUTPUT));
 $showsidepost = ($hassidepost && !$PAGE->blocks->region_completely_docked('side-post', $OUTPUT));
-
-$custommenu = $OUTPUT->custom_menu($PAGE->theme->settings->custommenuitems);
-$hascustommenu = (empty($PAGE->layout_options['nocustommenu']) && !empty($custommenu));
-
 
 $bodyclasses = array();
 if ($showsidepre && !$showsidepost) {
@@ -65,12 +68,6 @@ echo $OUTPUT->doctype() ?>
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-
-
     <!-- Le fav and touch icons -->
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('ico/favicon', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo $OUTPUT->pix_url('ico/apple-touch-icon-144-precomposed', 'theme'); ?>" />
@@ -78,14 +75,11 @@ echo $OUTPUT->doctype() ?>
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo $OUTPUT->pix_url('ico/apple-touch-icon-72-precomposed', 'theme'); ?>" />
     <link rel="apple-touch-icon-precomposed" href="<?php echo $OUTPUT->pix_url('ico/apple-touch-icon-57-precomposed', 'theme'); ?>" />
 
-
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
-
 <body id="<?php p($PAGE->bodyid) ?>" class="<?php p($PAGE->bodyclasses.' '.join(' ', $bodyclasses)) ?>">
-
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
-
+<div id="page">
     <div class="tiny-navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
@@ -110,13 +104,14 @@ echo $OUTPUT->doctype() ?>
                         <?php echo get_string('mycourses'); ?></a></li>
                         <li><a href="<?php echo $CFG->wwwroot; ?>/user/files.php"><i class="icon-briefcase"></i> <?php echo get_string('myfiles'); ?></a></li>
                         <li><a href="<?php echo $CFG->wwwroot; ?>/user/profile.php"><i class="icon-edit"></i> <?php echo get_string('editmyprofile'); ?></a></li>
+                        <li class="divider"></li>
                         <li class="lang-menu"><?php echo $OUTPUT->lang_menu(); ?></li>
                     </ul>
                 </li>
             <?php
         } else { ?>
               <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-cog icon-white"></i> <?php echo get_string('language'); ?>&nbsp;<b class="caret"></b></a>
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-plane icon-white"></i> <?php echo get_string('language'); ?>&nbsp;<b class="caret"></b></a>
                 <ul class="dropdown-menu lang-menu">
                   <li class="lang-menu"><?php echo $OUTPUT->lang_menu(); ?></li>
                 </ul>
@@ -207,6 +202,7 @@ echo $OUTPUT->doctype() ?>
 
 
 </div> <!-- /container fluid (2)-->
+</div>
 
 <?php echo $OUTPUT->standard_end_of_body_html() ?>
 </body>

@@ -15,11 +15,11 @@ h3.name,
 
 @font-face {
       font-family: FerroRosso;
-      src: url(tiny/font/FerroRosso.ttf) format("truetype");
+      src: url([[font:theme|FerroRosso.ttf]]) format("truetype");
 }
 @font-face {
       font-family: Mordred;
-      src: url(tiny/font/Mordred.ttf) format("truetype");
+      src: url([[font:theme|mordred.ttf]]) format("truetype");
 }
 
 [[setting:customcss]]

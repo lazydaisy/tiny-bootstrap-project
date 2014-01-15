@@ -73,22 +73,18 @@ li#section-0 h3.sectionname{
 -------------------------*/
 select.menulang {
     background-color: #fff;
-    border: 1px solid #bbb;
-    width: 100px;
     font-size: .8em;
-    float: right;
     margin: 0;
     padding: 2px;
     line-height: 1;
     height: 25px;
 }
-.dropdown-menu.lang-menu {
-    min-width: 100px;
-    padding: 0;
+.dropdown-menu .langmenu form {
+    margin-bottom: 0;
 }
-.dropdown-menu .langmenu {
-    padding: 10px 20px 20px;
-    float: left;
+.dropdown-menu .langmenu select {
+    margin: 0 5px;
+    width: 150px;
 }
 
 /* Parent theme override
@@ -125,7 +121,7 @@ div.rememberpass {
     margin-left: 5px;
 }
 .loginpanel h2 {
-    color: white;
+    color: #abc;
 }
 /* Course view
 -------------------------*/
@@ -181,7 +177,7 @@ div.rememberpass {
 -------------------------*/
 .block_settings .content #settingsnav.box ul.block_tree li.type_unknown hr,
 .block_settings .content #settingsnav.box ul.block_tree li.type_setting hr,
-.block_settings .content #settingsnav.box ul.block_tree li.type_setting hr {
+.block_settings .content #settingsnav.box ul.block_tree li.type_siteadmin hr {
     background-image:  url([[pix:theme|curly]]);
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -199,7 +195,8 @@ fieldset legend.ftoggler,
 .form-buttons input,
 .guestform input,
 .loginform .form-input input#loginbtn,
-.continuebutton form input {
+.continuebutton form input,
+.signupform form input {
     display: inline-block;
     *display: inline;
     padding: 4px 14px;
@@ -263,6 +260,15 @@ fieldset legend.ftoggler,
   text-align: center;
   font-size: 30px;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* Course summary
+-------------------------*/
+.coursebox .content .courseimage img {
+    max-width: inherit;
+    min-width: inherit;
+    width: 90%;
+    height: 90%;
 }
 
 /* Fieldset
@@ -508,3 +514,42 @@ div.moodle-dialogue-base div.yui3-widget{
 /* Custommenu adjustments
 -------------------------*/
 #custommenu {clear: right;}
+
+/* Notice
+-------------------------*/
+#page-login-logout #notice,
+.pagelayout-maintenance #notice {
+    text-align: center;
+}
+/* Frontpage
+-------------------------*/
+#frontpage-category-combo .coursebox.collapsed {
+    padding: 5px 19px;
+    margin-bottom: 5px;
+}
+#frontpage-course-list .coursebox h3.coursename {
+    line-height: 1;
+}
+#page-site-index .no-overflow {
+    overflow: visible;
+}
+/* Login
+-------------------------*/
+
+.loginbox.twocolumns .loginpanel {
+    border-right: 0 none;
+    float: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: 49.5%;
+}
+#page-login-index .default-unit {
+    visibility: hidden;
+}
+/* Grader
+-------------------------*/
+.path-grade-edit-tree .gradetreebox {
+    padding-bottom: 15px;
+    width: 90%;
+    margin: 10px auto;
+}

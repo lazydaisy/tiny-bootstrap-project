@@ -1,6 +1,6 @@
 <?php
 
-function tiny_process_css($css, $theme) {
+function theme_tiny_process_css($css, $theme) {
 
     // Set the url for @font-face
     if (!empty($theme->settings->font)) {
@@ -8,7 +8,7 @@ function tiny_process_css($css, $theme) {
     } else {
         $font = '';
     }
-    $css = tiny_set_font($css, $font);
+    $css = theme_tiny_set_font($css, $font);
 
     // Set font-face for @font-face
     if (!empty($theme->settings->fontface)) {
@@ -17,7 +17,7 @@ function tiny_process_css($css, $theme) {
         $fontface = 'Mordred';
 
     }
-    $css = tiny_set_fontface($css, $fontface);
+    $css = theme_tiny_set_fontface($css, $fontface);
 
     // Set the background brand icon for tiny-navbar
     if (!empty($theme->settings->navbaricon)) {
@@ -25,7 +25,7 @@ function tiny_process_css($css, $theme) {
     } else {
         $navbaricon = null;
     }
-    $css = tiny_set_navbaricon($css, $navbaricon);
+    $css = theme_tiny_set_navbaricon($css, $navbaricon);
 
     // Set custom CSS
     if (!empty($theme->settings->customcss)) {
@@ -33,12 +33,12 @@ function tiny_process_css($css, $theme) {
     } else {
         $customcss = null;
     }
-    $css = tiny_set_customcss($css, $customcss);
+    $css = theme_tiny_set_customcss($css, $customcss);
 
     return $css;
 }
 
-function tiny_set_font($css, $font) {
+function theme_tiny_set_font($css, $font) {
     global $OUTPUT;
     $tag = '[[setting:font]]';
     $replacement = $font;
@@ -50,7 +50,7 @@ function tiny_set_font($css, $font) {
     return $css;
 }
 
-function tiny_set_fontface($css, $fontface) {
+function theme_tiny_set_fontface($css, $fontface) {
     global $OUTPUT;
     $tag = '[[setting:fontface]]';
     $replacement = $fontface;
@@ -63,7 +63,7 @@ function tiny_set_fontface($css, $fontface) {
     return $css;
 }
 
-function tiny_set_navbaricon($css, $navbaricon) {
+function theme_tiny_set_navbaricon($css, $navbaricon) {
     global $OUTPUT;
     $tag = '[[setting:navbaricon]]';
     $replacement = $navbaricon;
@@ -74,7 +74,7 @@ function tiny_set_navbaricon($css, $navbaricon) {
     return $css;
 }
 
-function tiny_set_customcss($css, $customcss) {
+function theme_tiny_set_customcss($css, $customcss) {
     $tag = '[[setting:customcss]]';
     $replacement = $customcss;
     if (is_null($replacement)) {

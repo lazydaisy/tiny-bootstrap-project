@@ -17,7 +17,7 @@
 
 /**
  * @package   theme_tiny
- * @copyright 2012 Mary Evans
+ * @copyright 2014 Mary Evans
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

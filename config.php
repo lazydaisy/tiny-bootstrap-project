@@ -27,7 +27,7 @@ $THEME->name = 'tiny';
 
 $THEME->parents = array('base');
 
-$THEME->sheets = array('tiny-bootstrap', 'tiny-layout', 'tiny-core', 'tiny-dock', 'tiny-bootstrap-responsive', 'undo', 'tiny-settings');
+$THEME->sheets = array('tiny-bsp', 'tiny-layout', 'tiny-core', 'tiny-dock', 'tiny-responsive', 'tiny-undo', 'font-awesome', 'tiny-settings');
 
 $THEME->parents_exclude_sheets = array('base'=>array('pagelayout'));
 
@@ -92,7 +92,7 @@ $THEME->layouts = array(
     'login' => array(
         'file' => 'login.php',
         'regions' => array(),
-        'options' => array('noheader'=>true, 'langmenu'=>true),
+        'options' => array('noheader'=>true, 'langmenu'=>true, 'nonavbar'=>true, 'nocustommenu'=>true),
     ),
 
     // Pages that appear in pop-up windows - no navigation, no blocks, no header.
@@ -150,6 +150,6 @@ $THEME->enable_dock = true;
 
 $THEME->rendererfactory = 'theme_overridden_renderer_factory';
 
-$THEME->csspostprocess = 'tiny_process_css';
+$THEME->csspostprocess = 'theme_tiny_process_css';
 
 $THEME->javascripts_footer = array('jquery-1.8.2.min','bootstrap-dropdown', 'bootstrap-collapse');

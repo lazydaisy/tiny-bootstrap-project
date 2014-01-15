@@ -1,0 +1,118 @@
+/** Undo Tiny-Bootstrap CSS **/
+
+.block.hidden,
+.block.invisible,
+fieldset.hidden {
+    visibility: visible;
+    display: block;
+}
+
+/* Custom Bootstrap CSS
+-------------------------*/
+.tiny-navbar .nav {
+    margin-left: 0;
+}
+
+.span6,
+.span3 {
+    border-top: 5px solid #abc;
+}
+
+li.section.main {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5;
+    border: 1px solid #e3e3e3;
+    -webkit-border-radius: 4px;
+       -moz-border-radius: 4px;
+            border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+       -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.default-unit {
+  height: auto;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+  background-color: #aabbcc;
+  -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+}
+.default-unit h1 {
+  margin-bottom: 0;
+  font-size: 200%;
+  line-height: 2;
+  letter-spacing: -1px;
+  color: white;
+  font-weight: 400;
+}
+
+.default-unit p {
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 30px;
+  color: inherit;
+  font-family: "Tempus Sans ITC", sans-serif;
+  font-style: italic;
+}
+
+
+/* Pagelayout
+-------------------------*/
+.side-pre-only .container-fluid .tiny-row-fluid .span3.right,
+.side-post-only .container-fluid .tiny-row-fluid .span3.left,
+.content-only .container-fluid .tiny-row-fluid .span3 {
+    width: 0!important;
+}
+
+.side-pre-only .container-fluid .tiny-row-fluid .span3.left {
+    width: 23.404255319148934%;
+    *width: 23.351063829787233%;
+}
+
+.side-pre-only .container-fluid .tiny-row-fluid .span6 {
+    width: 74.46808510638297%;
+    *width: 74.41489361702126%;
+}
+
+.side-post-only .container-fluid .tiny-row-fluid .span6 {
+    width: 74.46808510638297%;
+    *width: 74.41489361702126%;
+}
+.side-post-only .container-fluid .tiny-row-fluid .span3.right {
+    width: 23.404255319148934%;
+    *width: 23.351063829787233%;
+}
+
+.content-only .container-fluid .tiny-row-fluid .span6 {
+    width: 100%;
+    *width: 99.94680851063829%;
+    margin: 0!important;
+}
+a:hover {text-decoration: none;}
+
+.sitetopic .section .activity:hover,
+.course-content .section .activity:hover {
+    background-color: transparent;
+}
+
+@media (min-width: 240px) and (max-width: 768px) {
+    .side-pre-only .container-fluid .tiny-row-fluid .span3.right,
+    .side-post-only .container-fluid .tiny-row-fluid .span3.left,
+    .content-only .container-fluid .tiny-row-fluid .span3 {
+        width: 0!important;
+    }
+    .side-pre-only .container-fluid .tiny-row-fluid .span3.left,
+    .side-post-only .container-fluid .tiny-row-fluid .span3.right,
+    .side-pre-only .container-fluid .tiny-row-fluid .span6,
+    .side-post-only .container-fluid .tiny-row-fluid .span6,
+    .content-only .container-fluid .tiny-row-fluid .span6 {
+        width: 100%;
+        *width: 99.94680851063829%;
+        margin: 0!important;
+    }
+
+}

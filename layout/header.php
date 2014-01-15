@@ -13,7 +13,6 @@
             echo get_string('welcomenotetxt', 'theme_tiny');
         } ?>
 
-        <p><a class="btn btn-large" href="http://docs.moodle.org/23/en/Tiny_theme_for_Moodle_2.3"><i class="icon-hand-right"></i>&nbsp;&nbsp;<?php echo get_string('learnmore', 'theme_tiny'); ?></a></p>
         </div>
 
         <?php
