@@ -26,7 +26,7 @@
 $string['about'] = 'About us';
 
 
-$string['choosereadme'] = 'Tiny is a special theme built using Twitter Bootstrap 3 with only basic responsive grid scafolding layout, which is based on 960 Grid System (960.gs), and combined with javascript plugins, typography, form controls, and more. Tiny is, however, only intended as a starting point for other themes to build upon.';
+$string['choosereadme'] = 'Tiny is a special theme built using Twitter Bootstrap 3 with only basic responsive grid scaffolding layout, which is based on 960 Grid System (960.gs), and combined with javascript plugins, typography, form controls, and more. Tiny is, however, only intended as a starting point for other themes to build upon.';
 $string['configtitle'] = 'theme_tiny';
 $string['contact'] = 'Contact us';
 $string['customcss'] = 'Custom CSS';
@@ -52,5 +52,5 @@ $string['region-side-pre'] = 'Left side';
 
 $string['welcomenote'] = 'Welcome note';
 $string['welcomenotedesc'] = 'Here you can add your own personal welcome note';
-$string['welcomenotetxt'] = '<h1>Hello, world!</h1><p>Welome to my "Tiny Bootstrap Project" a new Moodle 2.6+ theme based on a template from <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 3.0</a>.</p><p>Incorporating FontAwesome, HTML5, CSS3, makes for an interesting project. So why not use it as a starting point to create something more unique...</p><p><a class="btn btn-large" href="#"><i class="fa fa-camera-retro"></i>&nbsp;&nbsp;Read moore...</a></p>';
+$string['welcomenotetxt'] = '<h1>Hello, world!</h1><p>Welome to my "Tiny Bootstrap Project" a new Moodle theme based on a template from <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 3.0</a>.</p><p>Incorporating FontAwesome, HTML5, CSS3, makes for an interesting project. So why not use it as a starting point to create something more unique...</p><p><a class="btn btn-large" href="#"><i class="fa fa-camera-retro"></i>&nbsp;&nbsp;Read more...</a></p>';
 
