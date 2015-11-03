@@ -19,7 +19,7 @@
  * Configuration for Moodle's tiny theme.
  *
  * @package   theme
- * @copyright 2012 Mary Evans
+ * @copyright 2015 byLazyDaisy.uk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

@@ -144,35 +144,13 @@ echo $OUTPUT->doctype() ?>
 
 <div class="tiny-row-fluid">
 <div id="page-content">
-
-    <?php if ($hassidepre) { ?>
-    <div class="span3 left">
-    <div id="region-pre" class="block-region">
-    <div class="region-content">
-        <?php echo $OUTPUT->blocks_for_region('side-pre') ?>
-    </div>
-    </div>
-    </div>
-    <?php } ?>
-
-    <div class="span6">
+    <div class="span12">
         <div id="region-main">
             <div class="region-content">
                 <?php echo method_exists($OUTPUT, "main_content")?$OUTPUT->main_content():core_renderer::MAIN_CONTENT_TOKEN ?>
             </div>
         </div>
     </div>
-
-    <?php if ($hassidepost) { ?>
-    <div class="span3 right">
-    <div id="region-post" class="block-region">
-    <div class="region-content">
-        <?php echo $OUTPUT->blocks_for_region('side-post') ?>
-    </div>
-    </div>
-    </div>
-    <?php } ?>
-
 </div>
 </div>
 <!-- end row 1 -->

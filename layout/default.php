@@ -18,7 +18,7 @@
  * Default layout for Moodle's tiny theme.
  *
  * @package   theme_tiny
- * @copyright 2014 Mary Evans
+ * @copyright 2015 byLazyDaisy.uk
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
@@ -118,7 +118,7 @@ echo $OUTPUT->doctype() ?>
               </li>
             <?php } ?>
             </ul>
-            <?php include('loginout.php'); ?>
+            <?php include('includes/loginout.php'); ?>
 
 
          </div><!--/.nav-collapse -->
@@ -129,7 +129,7 @@ echo $OUTPUT->doctype() ?>
 <!-- container fluid (2) -->
 <div class="container-fluid">
 
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <!-- navbar - breadcrumb -->
 
