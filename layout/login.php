@@ -118,7 +118,7 @@ echo $OUTPUT->doctype() ?>
               </li>
             <?php } ?>
             </ul>
-            <?php include('loginout.php'); ?>
+            <?php include('includes/loginout.php'); ?>
 
 
          </div><!--/.nav-collapse -->
@@ -129,7 +129,7 @@ echo $OUTPUT->doctype() ?>
 <!-- container fluid (2) -->
 <div class="container-fluid">
 
-<?php include('header.php'); ?>
+<?php include('includes/header.php'); ?>
 
 <!-- navbar - breadcrumb -->
 
